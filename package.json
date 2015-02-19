@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "author": "encadyma <encadyma@gmail.com>",
-  "description": "Kevin's personal robot and the official bot for encadyma.",
+  "description": "Kevin's personal assistant and encadyma's first and official bot.",
   "dependencies": {
     "hubot": "^2.11.1",
     "hubot-diagnostics": "0.0.1",

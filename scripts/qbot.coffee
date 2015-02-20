@@ -10,7 +10,8 @@
 
 module.exports = (robot) ->
   robot.enter (msg) ->
-    msg.send "Greetings #{JSON.stringify(msg)}."
+    msg_d = JSON.stringify(msg);
+    msg.send "Greetings #{msg_d}."
   robot.hear /^!(rick)\b/i, (msg) ->
     msg.reply "ROLL!"
   robot.hear /^!say (.*)$/i, (msg) ->

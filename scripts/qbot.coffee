@@ -10,7 +10,7 @@
 
 module.exports = (robot) ->
   robot.enter (msg) ->
-    msg.send msg.random "Greetings #{msg.message.text}."
+    msg.send "Greetings #{msg.message.text}."
   robot.hear /^!(rick)\b/i, (msg) ->
     msg.reply "ROLL!"
   robot.hear /^!say (.*)$/i, (msg) ->

@@ -10,10 +10,8 @@
 
 module.exports = (robot) ->
   robot.enter (msg) ->
-    console.log(msg.message.user.name);
-    msg.send "Greetings #{msg.message.user.name}."
+    msg.send "Greetings @#{msg.message.user.name}."
   robot.hear /^!(rick)\b/i, (msg) ->
-    console.log(msg.message.user.name);
     msg.reply "#{msg.message.user.name}ROLL!"
   robot.hear /^!say (.*)$/i, (msg) ->
     msg.reply msg.match[1]

@@ -10,10 +10,11 @@
 
 module.exports = (robot) ->
   robot.enter (msg) ->
-    msg_d = JSON.stringify(msg)
-    msg.send "Greetings #{msg_d}."
+    console.log(msg.message.user.name);
+    msg.send "Greetings #{msg.message.user.name}."
   robot.hear /^!(rick)\b/i, (msg) ->
-    msg.reply "ROLL!"
+    console.log(msg.message.user.name);
+    msg.reply "#{msg.message.user.name}ROLL!"
   robot.hear /^!say (.*)$/i, (msg) ->
     msg.reply msg.match[1]
   robot.hear /^!(help)|(commands)|(cmds)\b/i, (msg) ->

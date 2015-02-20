@@ -1,5 +1,5 @@
 # Description:
-#   Imitates Qbot from the EDM Qluster room.
+#   Imitates Qbot from the EDM Qluster plug.dj room.
 #
 # Notes:
 #   Really cool and familiar Qbot, for hubot!
@@ -9,6 +9,8 @@
 #   !help - Same as 'Hubot help'
 
 module.exports = (robot) ->
+  robot.enter (msg) ->
+    msg.send msg.random "Greetings #{msg.message.text}."
   robot.hear /^!(rick)\b/i, (msg) ->
     msg.reply "ROLL!"
   robot.hear /^!say (.*)$/i, (msg) ->

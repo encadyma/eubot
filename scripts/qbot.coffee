@@ -31,5 +31,4 @@ module.exports = (robot) ->
       cmd.replace new RegExp("^#{robot.name}"), prefix
     emit = cmds.join "\n"
     msg.send emit
-  robot.hear /^!gif (.*)$/i, (msg) ->
     

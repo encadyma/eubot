@@ -7,4 +7,14 @@
 #
 # Commands:
 #   
-#   pleasure me - Start a session with hubot
+#   make love to <user> - Make Hubot start a session with someone else in the room.
+#   pleasure me - Start a session with Hubot.
+
+module.exports = (robot) ->
+  
+  robot.hear /pleasure me/i, (msg) ->
+    robot.send 'I will.'
+  
+  robot.hear /make love to (.*)$/i, (msg) ->
+    data = msg.match[1]
+    robot.send 'Hey, #{data}. #{msg.message.user.name} told me to make love to you.'

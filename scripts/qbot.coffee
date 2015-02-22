@@ -14,7 +14,7 @@ module.exports = (robot) ->
   robot.hear /^!(rick)\b/i, (msg) ->
     msg.reply "#{msg.message.user.name}ROLL!"
   robot.hear /^!say (.*)$/i, (msg) ->
-    msg.reply msg.match[1]
+    msg.send msg.match[1]
   robot.hear /^!(help)|(commands)|(cmds)\b/i, (msg) ->
     # The same as in Hubot help
     cmds = robot.helpCommands()

@@ -11,6 +11,11 @@
 module.exports = (robot) ->
   robot.enter (msg) ->
     msg.send "Greetings @#{msg.message.user.name}."
+  robot.hear /time to bounce/i, (msg) ->
+    msg.send "*Makes #{msg.message.user.name} bounce.*"
+    msg.emote "set #{msg.message.user.name} as a bouncer."
+  robot.hear /make me an rdj/i, (msg) ->
+    msg.emote "set #{msg.message.user.name} as a resident DJ."
   robot.hear /^!(rick)\b/i, (msg) ->
     msg.reply "#{msg.message.user.name}ROLL!"
   robot.hear /^!say (.*)$/i, (msg) ->

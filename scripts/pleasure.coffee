@@ -1,12 +1,10 @@
-# WARNING! NSFW SCRIPT!
 # Description:
 #   By request of Filly, make Hubot your pleasure bot.
 #
 # Notes:
 #   Not my idea, but Filly's.
 #
-# Commands:
-#   
+# Commands: 
 #   make love to <user> - Make Hubot start a session with someone else in the room.
 #   pleasure me - Start a session with Hubot.
 

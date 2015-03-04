@@ -9,6 +9,14 @@
 #   pleasure me - Start a session with Hubot.
 
 module.exports = (robot) ->
+  
+  ###
+  pleasure_actions = [
+  {
+    action: 'c'
+  }]
+  ###
+  
   robot.hear /pleasure me/i, (msg) ->
     robot.send "I will, #{msg.message.user.name}."
   robot.hear /make love to (.*)/i, (msg) ->

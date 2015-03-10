@@ -10,12 +10,10 @@
 
 module.exports = (robot) ->
   
-  ###
   pleasure_actions = [
   {
     action: 'c'
   }]
-  ###
   
   robot.hear /(?:pleasure me)/i, (msg) ->
     robot.send "_makes love with #{msg.message.user.name}_"

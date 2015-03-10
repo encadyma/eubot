@@ -2,7 +2,7 @@
 #   By request of Filly, make Hubot your pleasure bot.
 #
 # Notes:
-#   Not my idea, but Filly's.
+#   Pleasure bots.
 #
 # Commands: 
 #   make love to <user> - Make Hubot start a session with someone else in the room.
@@ -18,7 +18,7 @@ module.exports = (robot) ->
   ###
   
   robot.hear /pleasure me/i, (msg) ->
-    robot.send "I will, #{msg.message.user.name}."
+    robot.send "_makes love with #{msg.message.user.name}_"
   robot.hear /make love to (.*)/i, (msg) ->
     data = msg.match[1]
-    robot.send "Hey, #{data}. #{msg.message.user.name} told me to make love to you."
+    robot.send "_gets into a threesome with {data} and {}_"

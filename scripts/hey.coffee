@@ -15,8 +15,8 @@ module.exports = (robot) ->
   
   robot.hear /^hey(?:,){0,1} (.*)$/i, (msg) ->
     data = msg.match[1]
-    c.write(data, (c) => msg.send("Cleverbot> @" + msg.message.user.name + " " + c.message))
+    c.write(data, (c) => msg.send("@" + msg.message.user.name + " " + c.message))
   
-  robot.hear /^(?:(?:cleverbot)|(?:cb)|(?:bot))(?:[,:]{0,1}) (.*)$/i, (msg) ->
+  robot.hear /^(?:(?:cleverbot)|(?:cb)|(?:hubbie)|(?:bot))(?:[,:]{0,1}) (.*)$/i, (msg) ->
     data = msg.match[1]
-    c.write(data, (c) => msg.send("Cleverbot> @" + msg.message.user.name + " " + c.message))
+    c.write(data, (c) => msg.send("@" + msg.message.user.name + " " + c.message))

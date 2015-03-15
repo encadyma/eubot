@@ -10,8 +10,9 @@
 
 module.exports = (robot) ->
   
-  robot.hear /(?:pleasure me)/i, (msg) ->
+  robot.hear /^(?:pleasure me)/i, (msg) ->
     robot.send "_makes love with #{msg.message.user.name}_"
-  robot.hear /(?:make love to) (.*)/i, (msg) ->
+  
+  robot.hear /^(?:make love to) (.*)/i, (msg) ->
     data = msg.match[1]
     robot.send "_gets into a threesome with {data} and {msg.message.user.name}_"

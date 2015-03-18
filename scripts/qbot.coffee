@@ -20,6 +20,14 @@ module.exports = (robot) ->
     msg.reply "#{msg.message.user.name}ROLL!"
   robot.hear /^!say (.*)$/i, (msg) ->
     msg.send msg.match[1]
+  robot.hear /^!slay (.*)$/i, (msg) ->
+    if msg.match[1] == "hubot"
+      robot.send "_Commits suicide (action done by #{msg.message.user.name})_"
+      console.error("_Commits suicide (action done by #{msg.message.user.name})_");
+      robot.send "Ending current process (hubot)."
+      process.exit(1);
+    else
+      msg.send "_Slays " + msg.match[1] + "_"
   robot.hear /^!(help)|(commands)|(cmds)\b/i, (msg) ->
     # The same as in Hubot help
     cmds = robot.helpCommands()

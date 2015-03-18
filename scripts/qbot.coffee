@@ -21,11 +21,14 @@ module.exports = (robot) ->
   robot.hear /^!say (.*)$/i, (msg) ->
     msg.send msg.match[1]
   robot.hear /^!slay (.*)$/i, (msg) ->
-    if msg.match[1] == "hubot"
-      robot.send "_Commits suicide (action done by #{msg.message.user.name})_"
+    if msg.match[1] == "hubot" || msg.match[1] == "hubbie" || msg.match[1] == "@hubbie"
+      # robot.send "_Commits suicide (action done by #{msg.message.user.name})_"
+      # robot.send "Ending current process (hubot) in 5 seconds."
       console.error("_Commits suicide (action done by #{msg.message.user.name})_");
-      robot.send "Ending current process (hubot)."
-      process.exit(1);
+      console.error("Ending current process (hubot) in 5 seconds.");
+      kill = () ->
+        process.exit(1)
+      setTimeout(kill, 5 * 1000);
     else
       msg.send "_Slays " + msg.match[1] + "_"
   robot.hear /^!(help)|(commands)|(cmds)\b/i, (msg) ->

@@ -22,8 +22,8 @@ module.exports = (robot) ->
     msg.send msg.match[1]
   robot.hear /^!slay (.*)$/i, (msg) ->
     if msg.match[1] == "hubot" || msg.match[1] == "hubbie" || msg.match[1] == "@hubbie"
-      # robot.send "_Commits suicide (action done by #{msg.message.user.name})_"
-      # robot.send "Ending current process (hubot) in 5 seconds."
+      robot.send "_Commits suicide (action done by #{msg.message.user.name})_"
+      robot.send "Ending current process (hubot) in 5 seconds."
       console.error("_Commits suicide (action done by #{msg.message.user.name})_");
       console.error("Ending current process (hubot) in 5 seconds.");
       kill = () ->
